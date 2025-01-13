@@ -1,0 +1,358 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 20%;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.password {
+  font-size: 16px;
+}
+.container {
+  width: 95%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.container h1 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.container .search {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+.container .search input {
+  width: calc(100% - 120px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.container button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 130px;
+}
+.container .btn-create {
+  background-color: black;
+  color: white;
+}
+.container .user-list {
+  margin-top: 20px;
+}
+.container .user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.container .btn-edit {
+  background-color: rgba(142, 142, 149, 0.786);
+  color: white;
+}
+.container .btn-delete {
+  background-color: rgba(255, 0, 0, 0.763);
+  color: white;
+}
+.container .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.container .modal.active {
+  display: flex;
+}
+.container .modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  /* width: 30%; */
+  position: relative;
+}
+.container .modal-header {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.container .modal input {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.container .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.container .modal .btn-cancel {
+  background-color: white;
+  border: 1px solid #ccc;
+  color: black;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+.container .modal .btn-create,
+.container .modal .btn-delete,
+.container .modal .btn-update {
+  background-color: black;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+.container .modal-close {
+  position: absolute;
+  top: 10px;
+  right: -35px;
+  color: #a19c9c;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.container .modal-close:hover {
+  position: absolute;
+  top: 10px;
+  right: -35px;
+  color: #6e6d6d;
+  font-size: 25px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+@media (max-width: 768px) {
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0 3%;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .container {
+    width: 95%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .container h1 {
+    font-size: 23px;
+    margin-bottom: 20px;
+  }
+  .container .search {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  .container .search input {
+    width: calc(100% - 95px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .container button {
+    /* padding: 10px; */
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 130px;
+  }
+  .container .btn-create {
+    background-color: black;
+    color: white;
+  }
+  .container .user-list {
+    margin-top: 20px;
+  }
+  .container .user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .container .btn-edit {
+    background-color: rgba(142, 142, 149, 0.786);
+    color: white;
+    width: 70px;
+  }
+  .container .btn-delete {
+    background-color: rgba(255, 0, 0, 0.763);
+    color: white;
+    width: 70px;
+  }
+  .container .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.739);
+    justify-content: center;
+    align-items: center;
+  }
+  .container .modal.active {
+    display: flex;
+  }
+  .container .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    position: relative;
+  }
+  .container .modal-header {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .container .modal input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .container .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .container .modal .btn-cancel {
+    background-color: white;
+    border: 1px solid #ccc;
+    color: black;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .container .modal .btn-create,
+  .container .modal .btn-delete,
+  .container .modal .btn-update {
+    background-color: black;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .container .modal-close {
+    position: absolute;
+    top: 10px;
+    right: -35px;
+    color: #a19c9c;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  .container .modal-close:hover {
+    position: absolute;
+    top: 10px;
+    right: -35px;
+    color: #6e6d6d;
+    font-size: 25px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  .password {
+    font-size: 16px;
+  }
+}
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+  background-color: #fff;
+}
+.user-info {
+  font-size: 14px;
+}
+.user-info strong {
+  display: block;
+  font-weight: bold;
+}
+.user-actions button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.edit-btn {
+  background-color: #f0f0f0;
+}
+.delete-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+/* Modal styles */
+#deleteModal {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#deleteModal[data-state="open"] {
+  display: block;
+  transform: translate(-50%, -50%) scale(1);
+  height: 20%;
+  width: 100%;
+}
+
+#deleteModal[data-state="closed"] {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.95);
+}
